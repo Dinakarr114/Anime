@@ -1,0 +1,169 @@
+
+body
+{
+    background-color: black;
+}
+#Scroll-Div {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 0;
+  margin-top: 120px;
+  /* background-color: red; */
+}
+
+/* Inner track to scroll */
+#Scroll-Div .scroll-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 25s linear infinite;
+}
+
+/* Style for all images */
+.All-Images {
+  height: 380px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Auto-scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-87%);
+  }
+}
+
+
+    #name-1
+    {
+      color: blue;
+      font-size: 60px;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-left: 15px;
+    }
+    #name-2
+    {
+
+      color: white;
+    }
+    #Kalfa
+    {
+      width: 340px;
+      height: 67px;
+    }
+
+    /* #Bioo
+    {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    #Bio
+{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.3);
+     
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    } */
+
+ @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Exo+2:wght@700&display=swap');
+
+/* Main Bio Box */
+#Bio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  padding: 35px 45px;
+  background: rgba(0, 0, 0, 0.6);
+  /* border: 2px solid #00ffff; */
+  border-radius: 20px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  animation: floatY 5s ease-in-out infinite, fadeInZoom 1.2s ease-out;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), inset 0 0 10px rgba(0, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Gradient, shimmer, and break line */
+#Bioo {
+  display: inline-block;
+  background: linear-gradient(270deg, #00ffff, #ff00ff, #ffff00);
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  line-height: 1.8;
+  animation: gradientShift 8s ease infinite, shimmer 2.5s infinite linear;
+}
+
+/* Soft glowing shimmer */
+@keyframes shimmer {
+  0% { text-shadow: 0 0 2px rgba(255,255,255,0.2); }
+  50% { text-shadow: 0 0 10px rgba(255,255,255,0.25); }
+  100% { text-shadow: 0 0 2px rgba(255,255,255,0.2); }
+}
+
+/* Gradient shift */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating animation */
+@keyframes floatY {
+  0%, 100% { transform: translate(-50%, -48%); }
+  50% { transform: translate(-50%, -52%); }
+}
+
+/* Zoom fade-in */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Optional background aura */
+#Bio::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(0,255,255,0.15) 0%, transparent 70%);
+  z-index: -1;
+  animation: pulseAura 4s infinite ease-in-out;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+@keyframes pulseAura {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.2); opacity: 0.2; }
+}
+
